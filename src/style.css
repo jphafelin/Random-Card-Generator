@@ -1,1 +1,44 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: #0E7E12;
+  box-sizing: border-box;
+  padding-top: 160px;
+}
+
+.card {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  padding-top: 125px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  font-size: 80px;
+  
+}
+
+.card::before{
+  
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  font-size: 80px;
+  
+}
+
+.card::after {
+ 
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: 80px;
+  transform: rotate(180deg);
+}
+
+.spade::before, .spade::after {content: '♠';}
+.heart::before, .heart::after {content: '♥'; color: red;}
+.club::before,  .club::after {content: '♣';}
+.diamond::before, .diamond::after {content: '♦'; color: red;}
